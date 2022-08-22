@@ -1,0 +1,945 @@
+﻿html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/*Сброс стилей*/
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+ul {
+    list-style: none;
+}
+
+button, input, select, textarea {
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+img, embed, iframe, object, audio, video {
+    height: auto;
+    max-width: 100%;
+}
+
+iframe {
+    border: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td, th {
+    padding: 0;
+    text-align: left;
+}
+/*Сброс стилей end*/
+
+/*fonts*/
+
+/* lato-regular - latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''), url('../fonts/lato-v20-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/lato-v20-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* lato-700 - latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''), url('../fonts/lato-v20-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/lato-v20-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* lato-900 - latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: local(''), url('../fonts/lato-v20-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/lato-v20-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/*fonts end*/
+/*body {
+    color: aqua;
+    background-color: lime;
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+}*/
+body {
+    font-family: "Lato";
+    font-style: normal;
+    font-size: 16px;
+    font-height: 1.2;
+    font-weight: normal;
+    color: #000;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+/*header style star*/
+.wrapper {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+}
+.wrapper-full {
+    max-width: 1262px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.section-title {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 42px;
+    color: #102746;
+    position: relative;
+    padding-bottom: 10px;
+}
+.section-title::after {
+    display: block;
+    content: "";
+    width: 253px;
+    height: 3px;
+    background-color: aqua;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.2s linear;
+    padding-bottom: 25px;
+    z-index: 999;
+}
+.header_active {
+    background: #0E1D28;
+}
+.header-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-top: 56px;
+}
+.header-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.header-item {
+    margin-right: 82px;
+}
+    .header-item: last-child {
+        margin-right: 0;
+    }
+.header-link {
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+    text-decoration: none;
+}
+.header-link:hover{
+    opacity: 0.75;
+}
+    .header-link:focus {
+        opacity: 0.75;
+    }
+    .header-link:focus {
+        opacity: 0.75;
+    }
+
+.header-burger {
+    display: none;
+    width: 40px;
+    height: 28px;
+    position: relative;
+}
+.burger-line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+}
+.burger-line-first {
+    top: 0;
+}
+.burger-line-third {
+    bottom: 0;
+
+}
+.burger-line-second {
+    top: 50%;
+    transform: translateY(-50%);
+}
+/*header style end*/
+/*itnro style star*/
+.intro {
+    min-height: 100vh;
+    background: url(./img/Hero.jpg) no-repeat center;
+    background-size: cover;
+    padding-top: 263px;
+    border: 0;
+    padding-top: 263px;
+    padding-bottom: 223px;
+}
+.intro_title {
+    max-width: 619px;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 60px;
+    color: #FFFFFF;
+    margin-bottom: 22px;
+}
+.intro-subtitle {
+    max-width: 546px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-bottom: 59px;
+}
+.search_form {
+    display: none;
+}
+.search_form_info {
+    display: flex;
+    flex-wrap: wrap;
+    border: none;
+    outline-offset: 0;
+}
+.search_form_field {
+    width: 297px;
+    background: transparent url(./img/Oval.png) no-repeat left 7px;
+    background-size: 20px;
+    border: none;
+    border-bottom: 2px solid #BFC0C5;
+    margin-right: 60px;
+    padding-left: 43px;
+    padding-bottom: 22px;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+    .search_form_field::placeholder {
+        font-size: 18px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+.search_form_submit {
+    padding: 15px 39px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    background: #1B7DFF;
+    border: 0;
+}
+    .search_form_submit:hover {
+        background-color: aqua;
+    }
+    .search_form_submit:focus {
+        background-color: aqua;
+    }
+    .search_form_submit:active {
+        background-color: aqua;
+    }
+
+
+/*intro style end*/
+/*benefits style star*/
+.benefits {
+    margin-bottom: 131px;
+}
+
+.benefits_wrap {
+    max-width: 1262px;
+    background-color: white;
+    margin: 0 auto;
+    box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+    position: relative;
+}
+
+.benefits_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 55px;
+    padding: 0 100px;
+}
+.benefits_title {
+    width: 100%;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 42px;
+    color: #102746;
+    padding: 93px 100px 88px 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    background-color: white;
+}
+
+.benefits_card {
+    grid-column: span 1;
+    margin-bottom: 112px;
+}
+.benefits_card-pic {
+    margin-bottom: 37px;
+    max-width: 66px;
+}
+.benefits_card-thumb {
+    display: block;
+}
+.benefits_card-title {
+    margin-bottom: 26px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+}
+.benefits_card-deks {
+    margin-bottom: 39px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+.benefits_card-more {
+    display: inline-block;
+    padding-right: 59px;
+    background: url(./img/Shape.png) no-repeat 95% center;
+    font-size: 16px;
+    line-height: 24px;
+    color: #006DFE;
+    text-decoration: none;
+}
+    .benefits_card-more:hover {
+        background: url(./img/Shape.png) no-repeat right center;
+        transition: 0.2s all;
+    }
+    .benefits_card-more:focus {
+        background: url(./img/Shape.png) no-repeat right center;
+        transition: 0.2s all;
+    }
+
+
+/*benefits style end*/
+
+/*plases style start*/
+
+.places {
+    margin-bottom: 131px;
+}
+
+.places-title {
+    margin-right: 15px;
+    font-size: 50search_formpx;
+}
+.places-caption {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 36px;
+}
+.places-view-all {
+    display: inline-block;
+    padding-right: 59px;
+    background: url(./img/Shape.png) no-repeat 95% center;
+    font-size: 16px;
+    line-height: 24px;
+    color: #006DFE;
+    text-decoration: none;
+}
+    .places-view-all:hover {
+        opacity: 0.65;
+    }
+
+    .places-view-all:focus {
+        opacity: 0.65;
+    }
+.places-cards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+}
+.places-card {
+    position: relative;
+    overflow: hidden;
+}
+
+    .places-card::after {
+        display: block;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: rgba(21, 24, 36, 0.4);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+.places-card:hover .places-card-pic-size-lg {
+    transform: scale(1.05);
+}
+.places-card:hover .places-card-pic-size-sm {
+    transform: scale(1.05);
+}
+.places-card-title {
+    font-size: 50px;
+    line-height: 60px;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 27px;
+    left: 29px;
+    z-index: 3;
+}
+.places-card-size-lg {
+    grid-column: span 3;
+}
+.places-card-size-sm {
+    grid-column: span 2;
+}
+
+.places-card-pic-lg {
+   transition: 0.15s;
+    width: 100%;
+}
+.places-card-pic-sm {
+    transition: 0.15s;
+    width: 100%;
+}
+
+.places-card-pic-size-lg {
+    object-fit: cover;
+    height: 354px;
+    width: 100%;
+}
+.places-card-pic-size-sm {
+    height: 383px;
+}
+.places-card-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+
+/*plases style end*/
+
+/*tours style star*/
+
+.tours {
+    margin-bottom: 139px;
+}
+.tours_tour {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 108px;
+    align-items: center;
+    margin-bottom: 77px;
+}
+.tour-title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+    color: #102746;
+    margin-bottom: 85px;
+}
+.tour-desc {
+    font-size: 16px;
+    line-height: 24px;
+    color: #102746;
+    margin-bottom: 58px;
+}
+.tour-link {
+    
+    display: inline-block;
+    padding-right: 59px;
+    background: url(./img/Shape.png) no-repeat 95% center;
+    font-size: 16px;
+    line-height: 24px;
+    color: #006DFE;
+    text-decoration: none;
+}
+    .tour-link:hover {
+        background: url(./img/Shape.png) no-repeat right center;
+        transition: 0.2s all;
+    }
+
+    .tour-link:focus {
+        background: url(./img/Shape.png) no-repeat right center;
+        transition: 0.2s all;
+    }
+.tour-info {
+    padding-left: 47px;
+}
+
+/*touurs style end*/
+
+/*top style start*/
+
+.top {
+    margin-bottom: 85px;
+}
+.top-card {
+    display: flex;
+    flex-direction: column;
+    grid-column: span 2;
+}
+.top-cards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 57px;
+}
+.top-title {
+    margin-bottom: 54px;
+    margin-top: 50px;
+}
+.top-card-pic {
+    position: relative;
+    margin-bottom: 45px;
+}
+.top-card-stats {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /*background: rgba(21, 24, 36, 0.6);*/
+    padding: 25px 16px;
+}
+
+.top-card-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin: 0 auto 0 0;
+}
+.top-card-likes {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    padding-right: 20px;
+    background: url(./img/heart-ico.png) no-repeat right;
+    margin-right: 14px;
+}
+.top-card-coment {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    padding-right: 27px;
+    background: url(./img/coment-ico.png) no-repeat right;
+}
+.top-card-desc {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    color: #102746;
+    margin-bottom: 31px; 
+}
+.top-card-more {
+    width: 118px;
+    padding: 12px 19px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 29px;
+    color: #FFFFFF;
+    background: #1B7DFF;
+    border: 0;
+    text-decoration: none;
+    margin: auto 0 0 0;
+}
+
+    .top-card-more:hover {
+        background-color: aqua;
+    }
+
+    .top-card-more:focus {
+        background-color: aqua;
+    }
+
+    .top-card-more:active {
+        background-color: aqua;
+    }
+}
+
+/*top style end*/
+
+/*video star*/
+
+
+.videos {
+    width: 100%;
+    
+}
+.video-wraaper {
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 50px;
+}
+.video-item {
+    padding-top: 56.28%;
+}
+.video-el {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*video end*/
+
+
+/*para star*/
+
+.para {
+    margin-top: 50px;
+}
+
+summary {
+    list-style-type: none;
+    
+}
+
+.accardeone {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accardeone-item {
+    background-color: white;
+    color: black;
+}
+
+.accardeone-title {
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+    background-color: aliceblue;
+    cursor: pointer;
+    border-bottom: 1px solid snow;
+    padding: 10px 0px 10px 10px;
+    transition: 0.3s all;
+    position: relative;
+}
+
+.accardeone-item:not([open]):last-child .accardeone-title::after {
+    border-bottom: 1px solid transparent;
+}
+
+.accardeone-title:hover {
+    background-color: aqua;
+}
+
+.accardeone-title::after {
+    display: block;
+    content: "▼";
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-40%);
+    transition: 0.3s all;
+}
+
+.accardeone-item[open] .accardeone-title::after {
+    transform: translateY(-40%) rotate(180deg);
+}
+
+.accardeone-body {
+    padding: 20px;
+}
+.QS {
+    justify-content: center;
+    margin-left: 40px;
+    padding-top: 20px;
+}
+#QS-link {
+    margin-left: 22px;
+}
+/*para end*/
+/*futer star*/
+.footer {
+    margin-top: 50px;
+    background-color: #0E1D28;
+    padding: 119px 0;
+}
+.footer-item {
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-logo{
+    width: 50%;
+}
+.footer-nav {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+}
+.footer-menu-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+     color: #FFFFFF;
+}
+.footer-menu-link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+    .footer-menu-link:hover {
+        color: aqua;
+        opacity: 0.75;
+    }
+    .footer-menu-link:focus {
+        color: aqua;
+    }
+
+    .footer-menu-link:active {
+        color: aqua;
+    }
+
+/*futer end*/
+/*media start*/
+@media screen and (max-width: 960px) {
+    .benefits_title {
+        padding: 55px 15px;
+    }
+    .video-el {
+        width: 100%;
+    }
+    .search_form_field {
+        margin-bottom: 25px;
+    }
+    .benefits_cards {
+        padding: 0 15px;
+        grid-column-gap: 35px;
+    }
+    .places-card-size-lg {
+        grid-column: span 6;
+    }
+    .places-card-size-sm {
+        grid-column: span 6;
+    
+    }
+    .places-card-pic-size-sm {
+        max-width: 100%;
+        height: 100%;
+    }
+    .tours_tour {
+        grid-column-gap: 35px;
+    }
+    .tour-info {
+        padding-left: 0;
+    }
+    .tour-title {
+        margin-bottom: 15px;
+    }
+    .tour-desc {
+        margin-bottom: 15px;
+    }
+    .top-cards {
+        grid-gap: 25px;
+    }
+    .top-card {
+        grid-column: span 3;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .header-burger {
+        display: block;
+    }
+    
+    .video-wraaper {
+        width: 100%;
+    }
+    .header_nav {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: black;
+        z-index: 10;
+        padding: 75px;
+        transform: translateX(100%);
+        transition: 0.2s all linear;
+    }
+    .header_nav-active {
+        transform: translateX(0%);
+    }
+    .header-item {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+        .header-item:last-child {
+            margin-bottom: 0px;
+        }
+    .header-link {
+        font-size: 42px;
+        line-height: 48px;
+    }
+    .header_nav-close {
+        width: 10%;
+        height: 10%;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 11;
+    }
+    .header_nav-close-line {
+        width: 100%;
+        display: block;
+        height: 2px;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        
+    }
+        .header_nav-close-line:first-child {
+            transform: translateY(-50%) rotate(45deg);
+        }
+        .header_nav-close-line:last-child {
+            transform: translateY(-50%) rotate(-45deg);
+        }
+
+
+   
+    .intro {
+        padding-top: 225px;
+        width:100%;
+        
+    }
+    .search_form_field {
+        margin-right: 0;
+        width: 100%;
+        
+    }
+    .intro_title {
+        font-size: 32px;
+    }
+    .intro-subtitle {
+        font-size: 14px;
+    }
+
+    .benefits_card {
+        grid-column: span 3;
+    }
+    .header-wrapper {
+        padding-top: 28px;
+    }
+    .wrapper {
+        height: 100%;
+        width: 100%;
+    }
+    .search_form_field::placeholder {
+        font-size: 16px;
+       
+    }
+    .search_form_field {
+        padding-bottom: 12px;
+    }
+    .search_form_submit {
+        width: 100%;
+    }
+    .section-title::after {
+        width: 78px;
+        
+    }
+    .section-title:{
+        margin-bottom: 25px;
+    }
+    .places-view-all {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    .places {
+        margin-bottom: 70px;
+    }
+    .tour-pic, tour-info {
+        grid-column: span 2;
+    }
+    .tour-pic {
+        margin-bottom: 12px;
+    }
+    .top-card-pic-mob {
+        grid-row-start: -1;
+    }
+    .tours {
+        margin-bottom: 70px;
+    }
+    .top-card {
+        grid-column: span 6;
+    }
+    .top {
+        margin-bottom: 70px;
+    }
+    .top-card-stats {
+        width: 100%;
+    }
+    .top-card-desc {
+        margin-bottom: 15px;
+    }
+   
+
+    .footer-logo {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+    .footer-nav {
+        width: 100%;
+        margin-top: 24px;
+    }
+}
+
+
+/*media end*/
