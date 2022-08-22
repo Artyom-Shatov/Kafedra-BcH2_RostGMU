@@ -1,4 +1,4 @@
-#Kafedra-BcH2_RostGMU
+
 <!DOCTYPE html>
 <html>
 <head>
